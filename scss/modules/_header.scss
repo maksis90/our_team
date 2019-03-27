@@ -1,0 +1,30 @@
+.header-wrap {
+	padding-top: 60px;
+	text-align: center;
+	
+	.header {
+		text-transform: uppercase;
+		padding: 0 70px 40px;
+		display: inline-block;
+		border-bottom: 1px solid $yellow;
+		position: relative;
+	
+			&__title {
+				font: 900 60px/66px $roboto;
+				color: $yellow;
+			}
+
+			&__subtitle {
+				font: 500 18px/24px $raleway;
+				color: #898f8f;
+				margin-bottom: 10px;
+			}
+
+		&::after {
+			content: '';
+			@include size(30px);
+			@include pos($l: calc(50% - 15px), $b: -20px);
+    		background: url('../images/header-icon.jpg') no-repeat top center;
+		}
+	}
+}
